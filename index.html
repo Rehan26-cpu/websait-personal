@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> situs Rehan Paujan</title>
+        <title>Situs Rehan Paujan</title>
     </head>
     <body>
         <table width="100%" border="1">
-          <tr><td colspan="2" height="200"><img src="img/border.png" width="100%" height="200"></td></tr>  
-          <tr><td height="500" width="10%" valign="top">
-            <table width="100%" border="1">
-                <tr><th> MENU </th></tr>
-                   <tr><td><img src="img/foto.png" width="20" height="20"><a href="index.html">Depan</a></td></tr>
-                   <tr><td><img src="img/download.jpg" width="20" height="20"><a href="index.html?menu=Biodata">Biodata</a></td></tr>
-                   <tr><td><img src="img/download.png" width="20" height="20"><a href="index.html?menu=Pendidikan">Pendidikan</a></td></tr>
-                   <tr><td><img src="img/pelatihan.png" width="20" height="20"><a href="index.html?menu=Pelatihan">Pelatihan</a></td></tr>
-                   <tr><td><img src="img/pelatihan.jpg" width="20" height="20"><a href="index.html?menu=portofolio">Portofolio</a></td></tr>
-            </table>
-          <tr><td> 1.2</td></tr>
-          <tr><td colspan="3" height="50"><img src="img/fotobawah.png" width="100%" height="100"</td></tr>  
-        
+            <!-- Header -->
+            <tr>
+                <td colspan="2" height="200">
+                    <img src="img/border.png" width="100%" height="200" alt="header">
+                </td>
+            </tr>  
+            
+            <!-- Content -->
+            <tr>
+                <!-- Menu Sidebar -->
+                <td height="500" width="10%" valign="top">
+                    <table width="100%" border="1">
+                        <tr><th>MENU</th></tr>
+                        <tr><td><img src="img/foto.png" width="20" height="20" alt="home icon"><a href="index.html">Depan</a></td></tr>
+                        <tr><td><img src="img/download.jpg" width="20" height="20" alt="biodata icon"><a href="index.html?menu=Biodata">Biodata</a></td></tr>
+                        <tr><td><img src="img/download.png" width="20" height="20" alt="pendidikan icon"><a href="index.html?menu=Pendidikan">Pendidikan</a></td></tr>
+                        <tr><td><img src="img/pelatihan.png" width="20" height="20" alt="pelatihan icon"><a href="index.html?menu=Pelatihan">Pelatihan</a></td></tr>
+                        <tr><td><img src="img/pelatihan.jpg" width="20" height="20" alt="portfolio icon"><a href="index.html?menu=portofolio">Portofolio</a></td></tr>
+                    </table>
+                </td>
+                
+                <!-- Main Content -->
+                <td>
+                    <?php
+                    if (isset($_GET['menu'])) {
+                        switch($_GET['menu']) {
+                            case 'Biodata':
+                                include 'Biodata.php';
+                                break;
+                            case 'portofolio':
+                                include 'portofolio.php';
+                                break;
+                            case 'Pendidikan':
+                                include 'pendidikan.php';
+                                break;
+                            default:
+                                echo 'Halaman tidak ditemukan';
+                        }
+                    }
+                    ?>
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2" height="50">
+                    <img src="img/fotobawah.png" width="100%" height="100" alt="footer">
+                </td>
+            </tr>  
         </table>
     </body>
 </html>

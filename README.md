@@ -1,2 +1,0 @@
-# websait-personal
-latihan perktikum

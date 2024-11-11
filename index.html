@@ -26,22 +26,18 @@
                     </table>
                 </td>
                 
-                <!-- Main Content -->
                 <td>
                     <?php
                     if (isset($_GET['menu'])) {
                         if($_GET['menu'] == 'biodata') {
                                 include 'biodata.php';
                                 }
-                          if($_GET['menu'] == 'Pendidikan')
-                                include 'portofolio.php';
-                                }
-                            case 'Pendidikan':
+                        if($_GET['menu'] == 'Pendidikan'){
                                 include 'pendidikan.php';
-                                break;
-                            default:
-                                echo 'Halaman tidak ditemukan';
-                        }
+                                }
+                        if($_GET['menu'] == 'fortopolio'){
+                                include 'fortopolio.php';
+                                }
                     }
                     ?>
                 </td>

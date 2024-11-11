@@ -30,13 +30,12 @@
                 <td>
                     <?php
                     if (isset($_GET['menu'])) {
-                        switch($_GET['menu']) {
-                            case 'Biodata':
+                        if($_GET['menu'] == 'biodata') {
                                 include 'biodata.php';
-                                break;
-                            case 'portofolio':
+                                }
+                          if($_GET['menu'] == 'Pendidikan')
                                 include 'portofolio.php';
-                                break;
+                                }
                             case 'Pendidikan':
                                 include 'pendidikan.php';
                                 break;

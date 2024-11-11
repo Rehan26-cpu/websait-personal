@@ -15,6 +15,19 @@
                    <tr><td><img src="img/pelatihan.png" width="20" height="20"><a href="index.html?menu=Pelatihan">Pelatihan</a></td></tr>
                    <tr><td><img src="img/pelatihan.jpg" width="20" height="20"><a href="index.html?menu=portofolio">Portofolio</a></td></tr>
             </table>
+              <?php
+            if (ISSET($_GET['menu'])){
+              if($_GET['menu'] == 'Biodata'){
+                include"Biodata.php";
+              }
+              if($_GET['menu'] == 'potofolio'){
+                include"fortopolio.php";
+              }
+              if($_GET['menu'] == 'Pendidikan'){
+                include"pendidikan.php";
+              } 
+            }
+            ?>
           </td><td><img src="img/imageatas.png" width="100%" height="500"></td></tr></td></tr>
           <tr><td colspan="3" height="50"><img src="img/fotobawah.png" width="100%" height="100"</td></tr>  
         

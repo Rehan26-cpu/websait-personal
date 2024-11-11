@@ -7,7 +7,7 @@
         <table width="100%" border="1">
           <tr><td colspan="2" height="200"><img src="img/border.png" width="100%" height="200"></td></tr>  
           <tr><td height="500" width="10%" valign="top">
-            <                    <table width="100%" border="1">
+          <table width="100%" border="1">
               <tr><th>MENU</th></tr>
               <tr><td><img src="img/foto.png" width="20" height="20" alt="home icon"><a href="index.php">Depan</a></td></tr>
               <tr><td><img src="img/download.jpg" width="20" height="20" alt="biodata icon"><a href="index.php?menu=Biodata">Biodata</a></td></tr>
@@ -15,8 +15,24 @@
               <tr><td><img src="img/pelatihan.png" width="20" height="20" alt="pelatihan icon"><a href="index.php?menu=Pelatihan">Pelatihan</a></td></tr>
               <tr><td><img src="img/pelatihan.jpg" width="20" height="20" alt="portfolio icon"><a href="index.php?menu=portofolio">Portofolio</a></td></tr>
           </table>
-           
-          </td><td>1.2</td></tr>  
+           </td><td align="center" valign="top">
+          <?php
+    if (ISSET ($_GET ['menu'])){
+      if ($_GET ['menu'] == 'biodata'){
+        include"biodata.php";
+      }
+      if ($_GET ['menu'] == 'pendidikan'){
+        include"pendidikan.php";
+      }
+      if ($_GET ['menu'] == 'fortopolia'){
+        include"fortopolio.php";
+      }
+    }
+    else{
+      include"depan.php";
+    }
+        
+    ?>
           <td colspan="2" height="50">
             <img src="img/fotobawah.png" width="100%" height="100" alt="footer">
         </td>
